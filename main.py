@@ -284,7 +284,7 @@ if __name__ == "__main__":
     val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=collate_fn)
     test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=collate_fn)
 
-    print("\n2. KHỞI TẠO MÔ HÌNH (SEQ2SEQ + ATTENTION)...")
+    print("\n2. KHỞI TẠO MÔ HÌNH...")
     INPUT_DIM = len(src_vocab)
     OUTPUT_DIM = len(trg_vocab)
     # Các tham số Dimension

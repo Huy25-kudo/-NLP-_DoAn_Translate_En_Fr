@@ -61,7 +61,7 @@ class Vocabulary:
         return self.itos.get(index, "<unk>")
 
 def build_vocab(filepath, tokenizer):
-    print(f"   - Đang đọc file {os.path.basename(filepath)} để xây từ điển (Max 10k)...")
+    print(f"   - Đang đọc file {os.path.basename(filepath)} để xây từ điển ...")
     if not os.path.exists(filepath):
         raise FileNotFoundError(f"Không tìm thấy file: {filepath}")
         
@@ -74,7 +74,7 @@ def build_vocab(filepath, tokenizer):
 class Multi30kDataset(Dataset):
     def __init__(self, src_file, trg_file):
         if not os.path.exists(src_file):
-            raise FileNotFoundError(f"❌ KHÔNG TÌM THẤY FILE: {src_file}")
+            raise FileNotFoundError(f"KHÔNG TÌM THẤY FILE: {src_file}")
         self.src_data = [line.strip() for line in open(src_file, 'r', encoding='utf-8')]
         self.trg_data = [line.strip() for line in open(trg_file, 'r', encoding='utf-8')]
 
